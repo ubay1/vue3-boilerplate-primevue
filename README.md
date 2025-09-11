@@ -14,30 +14,30 @@ install deps
 main.ts:
 
 ```ts
-import 'vue-global-api' // -> add this
+import "vue-global-api"; // -> add this
 ```
 
 vite.config.ts:
 
 ```ts
-import AutoImport from 'unplugin-auto-import/vite'
+import AutoImport from "unplugin-auto-import/vite";
 
 plugins: [
   AutoImport({
     imports: [
-      'vue', // ref, reactive, computed, watch, dll
-      'vue-router', // useRoute, useRouter
-      'pinia', // defineStore, storeToRefs
+      "vue", // ref, reactive, computed, watch, dll
+      "vue-router", // useRoute, useRouter
+      "pinia", // defineStore, storeToRefs
     ],
-    dirs: ['src/composables'], // auto-import custom composables
-    dts: 'src/auto-imports.d.ts',
+    dirs: ["src/composables"], // auto-import custom composables
+    dts: "src/auto-imports.d.ts",
     eslintrc: {
       enabled: true, // auto-generate eslintrc config
-      filepath: './.eslintrc-auto-import.json',
+      filepath: "./.eslintrc-auto-import.json",
       globalsPropValue: true,
     },
   }),
-]
+];
 ```
 
 eslint.config.ts:

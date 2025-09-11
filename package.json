@@ -18,10 +18,10 @@
     "format": "prettier --write src/",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-pattern .gitignore .",
     "lint:prettier": "prettier --check .",
-    "lint": "npm run lint:js && npm run lint:prettier",
-    "lintfix:js": "npm run lint:js -- --fix",
+    "lint": "pnpm lint:js && pnpm lint:prettier",
+    "lintfix:js": "pnpm lint:js",
     "lintfix:prettier": "prettier --write --list-different .",
-    "lintfix": "npm run lintfix:js && npm run lintfix:prettier"
+    "lintfix": "pnpm lintfix:js && pnpm lintfix:prettier"
   },
   "dependencies": {
     "@primeuix/themes": "^1.2.3",
